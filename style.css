@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00ff88;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: #00ff88;
+  font-size: 1.8em;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ff88;
+}
+
+/* Seções */
+section {
+  padding: 80px 10%;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.hero img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ff88;
+  box-shadow: 0 0 20px #00ff8844;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 2em;
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+/* Seções padrão */
+.sobre, .projetos, .contato {
+  text-align: center;
+}
+
+.sobre h2, .projetos h2, .contato h2 {
+  color: #00ff88;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+/* Projetos */
+.projetos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid #00ff88;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ff8844;
+}
+
+.card h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+/* Contato */
+.contato p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #00ff88;
+  color: #0d0d0d;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #00cc6d;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #0a0a0a;
+  border-top: 1px solid #00ff88;
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
