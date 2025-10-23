@@ -62,7 +62,6 @@ h2 {
 .hero img {
   width: 230px;               /* Largura da imagem de perfil */
   height: 230px;              /* Altura da imagem */
-  border-radius: 50%;         /* Deixa a imagem circular */
   object-fit: cover;          /* Garante que a imagem preencha o espaço sem distorcer */
 }
 
@@ -126,4 +125,5 @@ footer {
   color: #777;                /* Cor do texto do rodapé */
   font-size: 0.9em;           /* Tamanho de fonte menor */
 }
+
 
