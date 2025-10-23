@@ -87,16 +87,13 @@ h2 {
 .projetos-lista {
   display: flex;              /* Usa flexbox para organizar os cartões */
   flex-wrap: wrap;            /* Quebra linha quando necessário */
-  justify-content: center;    /* Centraliza os cartões */
   gap: 25px;                  /* Espaçamento entre os cartões */
   margin-top: 25px;           /* Espaço acima da lista */
 }
 
 .card {
-  background: #1a1a1a;        /* Fundo dos cartões (cinza escuro) */
   padding: 20px;              /* Espaçamento interno */
   width: 270px;               /* Largura fixa dos cartões */
-  border-radius: 10px;        /* Cantos arredondados */
   border: 1px solid #00ff88;  /* Borda verde neon */
 }
 
@@ -125,5 +122,6 @@ footer {
   color: #777;                /* Cor do texto do rodapé */
   font-size: 0.9em;           /* Tamanho de fonte menor */
 }
+
 
 
