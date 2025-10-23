@@ -1,180 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* ===== CONFIGURAÇÃO GERAL ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  margin: 0;                /* Remove margens padrão */
+  padding: 0;               /* Remove espaçamentos padrão */
+  box-sizing: border-box;   /* Inclui bordas e padding no cálculo total do tamanho dos elementos */
+  font-family: "Poppins", sans-serif; /* Define a fonte principal do site */
 }
 
 body {
-  background-color: #0d0d0d;
-  color: #f2f2f2;
-  line-height: 1.6;
-  scroll-behavior: smooth;
+  background: #0d0d0d;      /* Define a cor de fundo escura */
+  color: #f2f2f2;           /* Define a cor padrão do texto (branco acinzentado) */
+  line-height: 1.6;         /* Espaçamento entre linhas */
+  scroll-behavior: smooth;  /* Faz a rolagem da página ser suave */
 }
 
-/* Header */
+/* ===== CABEÇALHO ===== */
 header {
-  background-color: #111;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #00ff88;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: #111;                     /* Fundo levemente mais claro que o corpo */
+  padding: 20px 50px;                   /* Espaçamento interno */
+  display: flex;                        /* Usa flexbox para alinhar itens lado a lado */
+  justify-content: space-between;       /* Espaça o logo e o menu */
+  align-items: center;                  /* Centraliza verticalmente os itens */
+  border-bottom: 2px solid #00ff88;     /* Linha verde neon na parte inferior */
+  position: sticky;                     /* Faz o cabeçalho “grudar” no topo ao rolar */
+  top: 0;                               /* Posição no topo */
+  z-index: 100;                         /* Mantém o cabeçalho acima dos outros elementos */
 }
 
 header h1 {
-  color: #00ff88;
-  font-size: 1.8em;
+  color: #00ff88;        /* Cor verde neon para o nome/título */
+  font-size: 1.8em;      /* Tamanho da fonte maior para destaque */
 }
 
 nav a {
-  color: #f2f2f2;
-  text-decoration: none;
-  margin-left: 20px;
-  transition: 0.3s;
+  color: #f2f2f2;        /* Cor branca para os links do menu */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  margin-left: 20px;     /* Espaço entre os links */
 }
 
-nav a:hover {
-  color: #00ff88;
-}
-
-/* Seções */
+/* ===== SEÇÕES GERAIS ===== */
 section {
-  padding: 80px 10%;
+  padding: 80px 10%;     /* Espaçamento interno das seções */
+  text-align: center;    /* Centraliza o conteúdo do texto */
 }
 
-/* Hero */
+h2 {
+  color: #00ff88;        /* Cor verde para títulos das seções */
+  margin-bottom: 15px;   /* Espaço abaixo do título */
+  font-size: 1.8em;      /* Tamanho da fonte dos títulos */
+}
+
+/* ===== SEÇÃO HERO (INÍCIO DO SITE) ===== */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  min-height: 80vh;
-  text-align: center;
+  display: flex;              /* Alinha imagem e texto lado a lado */
+  flex-wrap: wrap;            /* Permite quebrar linha se necessário */
+  align-items: center;        /* Centraliza verticalmente */
+  justify-content: center;    /* Centraliza horizontalmente */
+  gap: 40px;                  /* Espaço entre a imagem e o texto */
+  min-height: 80px;           /* Ocupa 80% da altura da tela */
 }
 
 .hero img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #00ff88;
-  box-shadow: 0 0 20px #00ff8844;
-}
-
-.hero-text {
-  max-width: 500px;
+  width: 230px;               /* Largura da imagem de perfil */
+  height: 230px;              /* Altura da imagem */
+  object-fit: cover;          /* Garante que a imagem preencha o espaço sem distorcer */
 }
 
 .hero-text h2 {
-  font-size: 2em;
-  color: #00ff88;
-  margin-bottom: 10px;
+  color: #00ff88;             /* Cor verde neon para o título */
+  font-size: 2em;             /* Título maior para destaque */
+  margin-bottom: 10px;        /* Espaço abaixo do título */
 }
 
 .hero-text p {
-  font-size: 1.1em;
-  color: #ccc;
+  color: #ccc;                /* Texto em cinza claro */
+  font-size: 1.05em;          /* Tamanho do texto levemente maior que o padrão */
 }
 
-/* Seções padrão */
-.sobre, .projetos, .contato {
-  text-align: center;
-}
-
-.sobre h2, .projetos h2, .contato h2 {
-  color: #00ff88;
-  margin-bottom: 15px;
-  font-size: 1.8em;
-}
-
+/* ===== SEÇÃO SOBRE ===== */
 .sobre p {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #ccc;
+  max-width: 700px;           /* Largura máxima do parágrafo */
+  margin: 0 auto;             /* Centraliza o texto na tela */
+  color: #ccc;                /* Cor do texto */
 }
 
-/* Projetos */
+/* ===== SEÇÃO PROJETOS ===== */
 .projetos-lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+  display: flex;              /* Usa flexbox para organizar os cartões */
+  flex-wrap: wrap;            /* Quebra linha quando necessário */
+  justify-content: center;    /* Centraliza os cartões */
+  gap: 25px;                  /* Espaçamento entre os cartões */
+  margin-top: 25px;           /* Espaço acima da lista */
 }
 
 .card {
-  background-color: #1a1a1a;
-  padding: 20px;
-  width: 280px;
-  border-radius: 10px;
-  border: 1px solid #00ff88;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00ff8844;
+  background: #1a1a1a;        /* Fundo dos cartões (cinza escuro) */
+  padding: 20px;              /* Espaçamento interno */
+  width: 270px;               /* Largura fixa dos cartões */
+  border-radius: 10px;        /* Cantos arredondados */
+  border: 1px solid #00ff88;  /* Borda verde neon */
 }
 
 .card h3 {
-  color: #00ff88;
-  margin-bottom: 10px;
+  color: #00ff88;             /* Título verde neon dos projetos */
+  margin-bottom: 8px;         /* Espaço abaixo do título */
 }
 
 .card p {
-  color: #ccc;
-  font-size: 0.95em;
+  color: #ccc;                /* Texto descritivo em cinza */
+  font-size: 0.95em;          /* Texto um pouco menor */
 }
 
-/* Contato */
+/* ===== SEÇÃO CONTATO ===== */
 .contato p {
-  margin-bottom: 10px;
-  color: #ccc;
+  color: #ccc;                /* Cor cinza para informações de contato */
+  margin-bottom: 10px;        /* Espaço entre as linhas de texto */
 }
 
-.btn-whatsapp {
-  display: inline-block;
-  background-color: #00ff88;
-  color: #0d0d0d;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 20px;
-  transition: background 0.3s;
-}
-
-.btn-whatsapp:hover {
-  background-color: #00cc6d;
-}
-
-/* Rodapé */
+/* ===== RODAPÉ ===== */
 footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #0a0a0a;
-  border-top: 1px solid #00ff88;
-  color: #777;
-  font-size: 0.9em;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav {
-    margin-top: 10px;
-  }
-  .hero-text {
-    text-align: center;
-  }
+  background: #0a0a0a;        /* Fundo um pouco mais escuro */
+  border-top: 1px solid #00ff88; /* Linha verde separando o rodapé */
+  text-align: center;         /* Centraliza o texto */
+  padding: 15px;              /* Espaçamento interno */
+  color: #777;                /* Cor do texto do rodapé */
+  font-size: 0.9em;           /* Tamanho de fonte menor */
 }
