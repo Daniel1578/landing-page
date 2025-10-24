@@ -1,118 +1,78 @@
-/* CONFIGURAÇÃO GERAL/*
 * {
-  margin: 0;                /* Remove margens padrão */
-  padding: 0;               /* Remove espaçamentos padrão */
-  box-sizing: border-box;   /* Inclui bordas e padding no cálculo total do tamanho dos elementos */
+  margin: 0;                  /* Remove margens padrão dos elementos */
+  padding: 0;                 /* Remove espaçamentos padrão */
+  box-sizing: border-box;     /* Inclui padding e bordas no cálculo total da largura/altura */
   font-family: "Poppins", sans-serif; /* Define a fonte principal do site */
 }
 
 body {
-  background: #0d0d0d;      /* Define a cor de fundo escura */
-  color: #f2f2f2;           /* Define a cor padrão do texto (branco acinzentado) */
-  line-height: 1.6;         /* Espaçamento entre linhas */
-  scroll-behavior: smooth;  /* Faz a rolagem da página ser suave */
+  background: #0d0d0d;        /* Cor de fundo escura (preto suave) */
+  color: #f2f2f2;             /* Cor padrão do texto (branco acinzentado) */
+  scroll-behavior: smooth;    /* Faz a rolagem da página ser suave */
 }
 
-/* ===== CABEÇALHO ===== */
-header {
-  background: #111;                     /* Fundo levemente mais claro que o corpo */
-  padding: 20px 50px;                   /* Espaçamento interno */
-  display: flex;                        /* Usa flexbox para alinhar itens lado a lado */
-  justify-content: space-between;       /* Espaça o logo e o menu */
-  align-items: center;                  /* Centraliza verticalmente os itens */
-  border-bottom: 2px solid #00ff88;     /* Linha verde neon na parte inferior */
-  position: sticky;                     /* Faz o cabeçalho “grudar” no topo ao rolar */
-  top: 0;                               /* Posição no topo */
-  z-index: 100;                         /* Mantém o cabeçalho acima dos outros elementos */
-}
-
-header h1 {
-  color: #00ff88;        /* Cor verde neon para o nome/título */
-  font-size: 1.8em;      /* Tamanho da fonte maior para destaque */
-}
-
-nav a{
-  color: #f2f2f2;        /* Cor branca para os links do menu */
-  text-decoration: none; /* Remove o sublinhado dos links */
-  margin-left: 20px;     /* Espaço entre os links */
-}
-
-/* ===== SEÇÕES GERAIS ===== */
+/* SEÇÕES GERAIS */
 section {
-  padding: 80px 10%;     /* Espaçamento interno das seções */
-  text-align: center;    /* Centraliza o conteúdo do texto */
+  padding: 20px 10%;          /* Espaçamento interno das seções (vertical e horizontal) */
+  text-align: center;         /* Centraliza o conteúdo do texto */
+  
+}
+
+section p{
+  max-width: 700px;           /* Define uma largura máxima para o texto */
+  margin: 0 auto;             /* Centraliza o parágrafo */
+  color: #ccc;                /* Cor cinza clara */
+  font-size: 1.05em;          /* Tamanho de fonte confortável para leitura */
 }
 
 h2 {
-  color: #00ff88;        /* Cor verde para títulos das seções */
-  font-size: 1.8em;      /* Tamanho da fonte dos títulos */
+  color: #00ff88;             /* Cor verde neon para títulos das seções */
+  font-size: 1.8em;           /* Tamanho da fonte dos títulos */
+  margin-bottom: 20px;        /* Espaço abaixo dos títulos */
 }
 
-/* ===== SEÇÃO HERO (INÍCIO DO SITE) ===== */
+/* SEÇÃO HERO (INÍCIO)*/
 .hero {
-  display: flex;              /* Alinha imagem e texto lado a lado */
-  align-items: center;        /* Centraliza verticalmente */
-  justify-content: center;    /* Centraliza horizontalmente */
-  gap: 40px;                  /* Espaço entre a imagem e o texto */
-  min-height: 80px;           /* Ocupa 80% da altura da tela */
+  min-height: 5vh;           /* Ocupa 80% da altura da tela */
+  text-align: center;         /* Centraliza conteúdo da seção */
 }
 
 .hero img {
   width: 230px;               /* Largura da imagem de perfil */
-  height: 230px;              /* Altura da imagem */
-  object-fit: cover;          /* Garante que a imagem preencha o espaço sem distorcer */
+  height: 230px;              /* Altura da imagem de perfil */
+  object-fit: cover;          /* Garante que a imagem preencha o espaço sem distorção */
+  display: block;             /* Transforma a imagem em elemento de bloco */
+  margin: 0 auto 20px auto;   /* Centraliza a imagem e adiciona espaço abaixo */
 }
 
+/*TEXTO DA SEÇÃO HERO */
 .hero-text h2 {
-  color: #00ff88;             /* Cor verde neon para o título */
-  font-size: 2;             /* Título maior para destaque */
+  color: #00ff88;             /* Título verde neon */
+  font-size: 2em;             /* Tamanho maior para destaque */
   margin-bottom: 10px;        /* Espaço abaixo do título */
 }
 
 .hero-text p {
   color: #ccc;                /* Texto em cinza claro */
-  font-size: 1.05em;          /* Tamanho do texto maior que o padrão */
+  font-size: 1.05em;          /* Tamanho um pouco maior que o padrão */
 }
 
-/* ===== SEÇÃO SOBRE ===== */
+/*  SEÇÃO SOBRE */
 .sobre p {
-  max-width: 700px;           /* Largura máxima do parágrafo */
-  margin: 0 auto;             /* Centraliza o texto na tela */
-  color: #ccc;                /* Cor do texto */
+  max-width: 700px;           /* Define uma largura máxima para o texto */
+  margin: 0 auto;             /* Centraliza o parágrafo */
+  color: #ccc;                /* Cor cinza clara */
+  font-size: 1.05em;          /* Tamanho de fonte confortável para leitura */
 }
 
-/* ===== SEÇÃO PROJETOS ===== */
-.projetos-lista {
-  display: flex;              /* Usa flexbox para organizar os cartões */
-  flex-wrap: wrap;            /* Quebra linha quando necessário */
-  gap: 25px;                  /* Espaçamento entre os cartões */
-  margin-top: 25px;           /* Espaço acima da lista */
-}
 
-.card {
-  padding: 20px;              /* Espaçamento interno */
-  width: 270px;               /* Largura fixa dos cartões */
-  border: 1px solid #00ff88;  /* Borda verde neon */
-}
-
-.card h3 {
-  color: #00ff88;             /* Título verde neon dos projetos */
-  margin-bottom: 8px;         /* Espaço abaixo do título */
-}
-
-.card p {
-  color: #ccc;                /* Texto descritivo em cinza */
-  font-size: 0.95em;          /* Texto um pouco menor */
-}
-
-/* ===== RODAPÉ ===== */
 footer {
-  background: #0a0a0a;        /* Fundo um pouco mais escuro */
-  border-top: 1px solid #00ff88; /* Linha verde separando o rodapé */
+  background: #0a0a0a;        /* Fundo mais escuro que o restante da página */
+  border-top: 1px solid #00ff88; /* Linha verde neon separando o rodapé do conteúdo */
   text-align: center;         /* Centraliza o texto */
   padding: 15px;              /* Espaçamento interno */
-  color: #777;                /* Cor do texto do rodapé */
-  font-size: 0.9em;           /* Tamanho de fonte menor */
+  color: #777;                /* Cor do texto em cinza suave */
+  font-size: 0.9em;           /* Tamanho menor para o rodapé */
 }
 
 
